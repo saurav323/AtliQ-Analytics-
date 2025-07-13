@@ -17,7 +17,7 @@ when month(date) in (3,4,5) then "Q3"
 else "Q4"
 end as Quarter
 	from fact_sales_monthly 
-	where fiscal_year=2021
+	where fiscal_year=2020
 )
 select Quarter, sum(sold_quantity) as total_sold_quentity 
 from quarterly_sales group by Quarter order by total_sold_quentity desc;
